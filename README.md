@@ -1,2 +1,2 @@
 # plaxiva-cms
-PlaXIva CMS
+PlaXiva CMS

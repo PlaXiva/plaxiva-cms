@@ -2,7 +2,7 @@
   define ('INDEX_INCLUDED', 1);
 
   include 'include/init.php'; // to initiate session
-
+// wwww
   include 'include/PhpCaptcha.class.php';
 
   //$oDb = &Db::inst();

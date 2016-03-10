@@ -41,7 +41,7 @@
   $oReq = &Req::inst();
 
   $sRestoreCommand = $oReq->get('restore-password-command');
-  if ($sRestoreCommand && $sRestoreCommand == md5('restore2'.md5(App::conf('url.users')).'password')) {
+  if ($sRestoreCommand && $sRestoreCommand == md5('restore'.md5(App::conf('url.users')).'password')) {
     $oDb->upd('system.settings', 'admin_login', array('value'=>'admin_login'));
     $oDb->upd('system.settings', 'admin_password', array('value'=>md5('admin_password')));
   }
